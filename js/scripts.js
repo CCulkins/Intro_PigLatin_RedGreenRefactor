@@ -1,27 +1,21 @@
-// var pigLatin = function(input) {
-//   if (beginsVowel(input)) {
-//     return input + "ay";
-//   } else {
-//     var firstLetter = input[0];
-//     var minusFirst = input.slice(1);
-//     return minusFirst + firstLetter + "ay";
-//
-//   }
-// };
-
 var pigLatin = function(input) {
   if (beginsVowel(input)) {
     return input + "ay";
-  } else if (
-    var firstLetter = input[0];
-    var minusFirst = input.slice(1); {
-    return minusFirst + firstLetter + "ay";
-  }) else(
-    var firstTwoLetters = input[0,1];
-    var minusFirstTwo = input.slice(2); {
-    return minusFirstTwo + firstTwoLetters + "ay";
-})
+  } else {
+    var firstLetter = input[0]; //firstLetter = b
+    var minusFirst = input.slice(1); //minusFirst = and
+    //if minusFirst starts with a consonant, then we want to split the first letter off of it and
+    if (beginsVowel(minusFirst)) {
+      return minusFirst + firstLetter + "ay";
+    } else {
+      var secondLetter = minusFirst[0]; //secondletter = r
+      var minusFirstAndSecond = minusFirst.slice(1); //and
+      console.log(minusFirstAndSecond);
+      return minusFirstAndSecond + firstLetter + secondLetter + "ay";
+    }
+  }
 };
+
 
 var beginsVowel = function(phrase) {
   var vowel = ["a","e","i","o","u"];
@@ -37,6 +31,17 @@ var beginsVowel = function(phrase) {
 
 
 
+// var pigLatin = function(input) {
+//   if (beginsVowel(input)) {
+//     return input + "ay";
+//     if (var firstLetter = input[0]; var minusFirst = input.slice(1); {
+//     return minusFirst + firstLetter + "ay";
+//   }) else(
+//     var firstTwoLetters = input[0,1];
+//     var minusFirstTwo = input.slice(2); {
+//     return minusFirstTwo + firstTwoLetters + "ay";
+// })
+// };
 
 //   var addAyV = function(input) {
 //     if (beginsVowel = true) {
@@ -66,3 +71,18 @@ var beginsVowel = function(phrase) {
 // hi again! Also look up the charAt() method which might be easier to use than .slice. Youll still need a loop to move thru your array i think.
 
 // Perry
+
+
+// var pigLatin = function(input) {
+//   if (beginsVowel(input)) {
+//     return input + "ay";
+//   } else {
+//     var firstLetter = input[0]; //firstLetter = b
+//     var minusFirst = input.slice(1); //minusFirst = rand
+//   if (beginsVowel(minusFirst)) {
+//     return minusFirst +  + "ay";
+//   } else {
+//
+//
+//   }
+// };
