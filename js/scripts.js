@@ -1,17 +1,30 @@
 var pigLatin = function(input) {
+
   if (beginsVowel(input)) {
     return input + "ay";
-  } else {
+  }
+  else {
     var firstLetter = input[0]; //firstLetter = b
     var minusFirst = input.slice(1); //minusFirst = and
     //if minusFirst starts with a consonant, then we want to split the first letter off of it and
     if (beginsVowel(minusFirst)) {
       return minusFirst + firstLetter + "ay";
-    } else {
+    }
+    else {
       var secondLetter = minusFirst[0]; //secondletter = r
       var minusFirstAndSecond = minusFirst.slice(1); //and
-      console.log(minusFirstAndSecond);
-      return minusFirstAndSecond + firstLetter + secondLetter + "ay";
+      // return minusFirstAndSecond + firstLetter + secondLetter + "ay";
+        if (beginsVowel(minusFirstAndSecond)) {
+          return minusFirstAndSecond + firstLetter + secondLetter + "ay";  //
+        }
+
+
+        else {
+          var thirdLetter = minusFirstAndSecond[0]; //secondletter = s
+          var minusFirstSecondThird = minusFirstAndSecond.slice(1); //and
+          console.log(thirdLetter);
+          return minusFirstSecondThird + firstLetter + secondLetter + thirdLetter + "ay"; //temsysay
+      }
     }
   }
 };
@@ -28,6 +41,20 @@ var beginsVowel = function(phrase) {
 };
 
 
+
+
+
+
+// user_input = input.split('') ["c", "a", "t"]
+// vowels = {{alkjawlekjf}}
+//
+// cat
+
+// for(i=1; i <= user_input.length; i++){
+//   if vowels.include(user_input[i]){
+//     user_input.slice(0,i)
+//   }
+// }
 
 
 

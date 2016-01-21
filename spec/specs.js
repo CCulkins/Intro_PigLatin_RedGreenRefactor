@@ -8,6 +8,9 @@ describe("pigLatin", function() {
   it("Moves starting two consonants to the end of word and add 'ay'.", function() {
     expect(pigLatin("brand")).to.equal("andbray");
   });
+  it("Moves starting three consonants to the end of word and add 'ay'.", function() {
+    expect(pigLatin("system")).to.equal("temsysay");
+  });
 });
 describe("beginsVowel", function() {
   it("Determines whether a word begins with a vowel.", function () {
