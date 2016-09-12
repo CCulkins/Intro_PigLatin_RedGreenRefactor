@@ -27,7 +27,9 @@ _Cassandra Culkins: CCulkins_
 
 ## Technologies Used
 
-_JavaScript and Bootstrap were used in this page._
+_JavaScript_
+_Mocha_
+_Chai_
 
 ### License
 
